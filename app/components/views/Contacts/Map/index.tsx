@@ -15,7 +15,9 @@ const GoogleMapsComponent = () => {
     const apiKey = process.env.GOOGLE_MAP_API_KEY;
 
     const handleMapClick = useCallback(() => {
-        window.open('https://maps.app.goo.gl/YREvDJWfS7pqC5Xk6', '_blank');
+        if (typeof window !== "undefined") {
+            window.open('https://maps.app.goo.gl/YREvDJWfS7pqC5Xk6', '_blank');
+        }
     }, []);
 
     return (

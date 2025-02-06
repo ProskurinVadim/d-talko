@@ -4,7 +4,10 @@ import {useState, useEffect} from "react";
 type value = string | number;
 
 export const getWidth = (desktop: value , tablet: value, mobile: value): value => {
-    const innerWidth = window.innerWidth;
+    let innerWidth = 1024;
+    if (typeof window !== "undefined") {
+        innerWidth = window.innerWidth;
+    }
     return innerWidth > 1024 ? desktop : innerWidth > 768 ? tablet : mobile;
 }
 
