@@ -16,12 +16,12 @@ const Contacs:FC<object> = () => {
                     <div className="bg-white z-10 left-[-1px] top-[-1px] text-center pt-[11px] pb-10 md:text-left md:py-[60px] md:px-[44px] md:absolute md:w-[343px] lg:w-[550px] lg:p-20 ">
                         <SectionTitle tlwVar={{type:"large"}}>Контакти</SectionTitle>
                         <Heading tlwVar={h3Tlw} className='mb-2 mt-8 md:mt-14'>Телефон:</Heading>
-                        <Text tlwVar={{type: "contact"}}>+380981333098</Text>
+                        <Text className="lg:text-xl">+380981333098</Text>
                         <Heading tlwVar={h3Tlw} className='mb-2 mt--7 lg:mt-8'>Адреса</Heading>
-                        <Text tlwVar={{type: "contact"}}>Клініка “Mediland” - м. Київ, вул. Ростиславська 11б</Text>
-                        <Text tlwVar={{type: "contact"}} className="mt-3">Київська міська дитяча лікарня - м. Київ, вул. Богатирська 30</Text>
+                        <Text className="lg:text-xl">Клініка “Mediland” - м. Київ, вул. Ростиславська 11б</Text>
+                        <Text className="mt-3 lg:text-xl">Київська міська дитяча лікарня - м. Київ, вул. Богатирська 30</Text>
                         <Heading tlwVar={h3Tlw} className='mb-2 mt-7 lg:mt-8'>Час роботи:</Heading>
-                        <Text className='mt-3' tlwVar={{type: "contact"}}>Пн - Пт: з 10:00 до 19:00 </Text>
+                        <Text className='mt-3 lg:text-xl'>Пн - Пт: з 10:00 до 19:00 </Text>
                         <Heading tlwVar={h3Tlw} className='mb-4 mt-7 lg:mt-8'>Напишіть нам:</Heading>
                         <span className="flex justify-center md:justify-start">
                             <Icon className="mr-3" src="viber" />
