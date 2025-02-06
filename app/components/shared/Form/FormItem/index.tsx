@@ -15,7 +15,7 @@ const FormItem:FC<Props> = ({title, value, onChange, id, checked, type="text", c
         label: tlwLabel = {color: "main"}
     } = tlwVar
     return (
-        <div className={field(tlwField)}>
+        <div className={`field(tlwField) ${className}`}>
             <label className={label(tlwLabel)} htmlFor={id}>{title}</label>
             <input className={input(tlwInput)} onChange={(e) => onChange(e.target.value, id)} value={value} name={id} id={id} type={type} checked={checked}/>
         </div>
