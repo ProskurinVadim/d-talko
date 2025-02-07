@@ -8,8 +8,8 @@ const Banner:FC<object> = () => {
     const image = useResponsiveValue('desktop', 'tablet', 'mobile');
     return(
         <section>
-            <Container>
-                <div className="relative bg-cover bg-no-repeat md:py-[125px] lg:py-[179px]" style={{"backgroundImage": `url(./banner/bg-${image}.jpg)`}}>
+            <div className="relative bg-cover bg-no-repeat rounded-2xl md:py-[125px] lg:py-[179px]" style={{"backgroundImage": `url(./banner/bg-${image}.jpg)`}}>
+                <Container>
                     <SectionTitle className=" md:w-[430px] lg:w-[596px]" tlwVar={{position: "center", type: "large"}}>
                         Почни лікування сьогодні!
                     </SectionTitle>
@@ -21,8 +21,8 @@ const Banner:FC<object> = () => {
                         Запишіться на консультацію та отримайте персоналізований план лікування від досвідченого онкодерматолога.
                     </p>
                     <ConsultButton />
-                </div>
-            </Container>
+                </Container>
+            </div>
         </section>
     )
 }

@@ -18,7 +18,7 @@ const Specialization:FC<object> = () => {
      ]
     return (
         <section>
-            <div className="bg-cover bg-no-repeat bg-top pt-[319px] pb-10 md:py-[60px]" style={{"backgroundImage": `url(./specialization/bg-${image}.jpg)`}}>
+            <div className="bg-cover bg-no-repeat bg-top pt-[319px] pb-10 md:py-[60px] rounded-2xl" style={{"backgroundImage": `url(./specialization/bg-${image}.jpg)`}}>
                 <Container className="flex justify-center md:justify-end">
                     <div className="md:max-w-[493px]">
                         <Text tlwVar={{leading: "smallest", color: "light_green"}} className="text-sm mt-[19px] font-semibold">Ваше здоров&#39;я — моя спеціалізація!</Text>

@@ -19,10 +19,11 @@ const AboutHeader:FC<object> = () => {
                 <Text className="hidden lg:inline-block"
                       tlwVar={{type: "normal", color: "main", leading: "smallest"}}><Link href="/">Головна / </Link>Про
                     лікаря</Text>
-                <div className="relative bg-cover bg-no-repeat bg-top"
+            </Container> 
+            <div  className="relative bg-cover bg-no-repeat bg-top rounded-2xl"
                      style={{"backgroundImage": `url(./header/bg-${image}.jpg)`}}>
-                    <div className="pt-[353px] pb-10 md:py-[86px] lg:py-[75px]"
-                    >
+                <Container>
+                    <div className="pt-[353px] pb-10 md:py-[86px] lg:py-[75px]">
                         <Text tlwVar={{type: "medium", color: "light_green", leading: "smallest"}}>
                             Дерматохірург
                         </Text>
@@ -43,8 +44,8 @@ const AboutHeader:FC<object> = () => {
                         </Text>
                         <ConsultButton className="mt-8 md:mt-14 " inverse={true}/>
                     </div>
-                </div>
-            </Container>
+                </Container>
+            </div>
         </header>
     )
 }
