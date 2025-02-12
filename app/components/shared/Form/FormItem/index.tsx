@@ -1,11 +1,18 @@
 import {FC} from 'react'
 import {FormField} from "@/app/components/shared/Form";
 import {field, input, label} from "./form-item.tailwind";
+import { VariantProps } from 'tailwind-variants';
 
 export interface Props extends  FormField{
     onChange: (value: string, name: string) => void;
-    value: string ;
-    checked?: boolean
+    value: string;
+    checked?: boolean;
+    className?: string;
+    tlwVar?: {
+        input?: VariantProps<typeof input>,
+        field?: VariantProps<typeof field> 
+        label?: VariantProps<typeof label>
+    }
 }
 
 const FormItem:FC<Props> = ({title, value, onChange, id, checked, type="text", className="", tlwVar={}}) => {

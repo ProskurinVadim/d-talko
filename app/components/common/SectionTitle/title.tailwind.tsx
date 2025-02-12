@@ -5,6 +5,7 @@ export const h2 = tv({
     variants: {
         color: {
             main: "text-main",
+            danger: "text-[#FF0000]",
             main_dark: "text-main_dark",
             main_light: "text-[#2B8478]",
         },
@@ -15,6 +16,7 @@ export const h2 = tv({
             normal_large: "text-[24px] md:text-[32px] lg:text-[48px]",
             semi_large: "text-[32px] md:text-[40px] lg:text-[48px] leading-title",
             small: "text-[32px] leading-[110%]",
+            modal: "text-[16px] md:text-[24px] lg:text-[32px] leading-[125%]"
         },
         position: {
             center: "text-center md:text-left"

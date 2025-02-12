@@ -10,7 +10,7 @@ const Banner:FC<object> = () => {
         <section>
             <div className="relative bg-cover bg-no-repeat rounded-2xl md:py-[125px] lg:py-[179px]" style={{"backgroundImage": `url(./banner/bg-${image}.jpg)`}}>
                 <Container>
-                    <SectionTitle className=" md:w-[430px] lg:w-[596px]" tlwVar={{position: "center", type: "large"}}>
+                    <SectionTitle className="pt-[316px] md:pt-0 md:w-[430px] lg:w-[596px]" tlwVar={{position: "center", type: "large"}}>
                         Почни лікування сьогодні!
                     </SectionTitle>
                     <p className="text-additional leading-description
