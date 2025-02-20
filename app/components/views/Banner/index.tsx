@@ -8,7 +8,7 @@ const Banner:FC<object> = () => {
     const image = useResponsiveValue('desktop', 'tablet', 'mobile');
     return(
         <section>
-            <div className="relative bg-cover bg-no-repeat rounded-2xl md:py-[125px] lg:py-[179px]" style={{"backgroundImage": `url(./banner/bg-${image}.jpg)`}}>
+            <div className="relative bg-contain bg-top bg-no-repeat rounded-2xl md:py-[125px] lg:py-[179px]" style={{"backgroundImage": `url(./banner/bg-${image}.jpg)`}}>
                 <Container>
                     <SectionTitle className="pt-[316px] md:pt-0 md:w-[430px] lg:w-[596px]" tlwVar={{position: "center", type: "large"}}>
                         Почни лікування сьогодні!

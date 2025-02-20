@@ -20,7 +20,7 @@ const AboutHeader:FC<object> = () => {
                       tlwVar={{type: "normal", color: "main", leading: "smallest"}}><Link href="/">Головна / </Link>Про
                     лікаря</Text>
             </Container> 
-            <div  className="relative bg-cover bg-no-repeat bg-top rounded-2xl"
+            <div  className="relative bg-contain bg-no-repeat bg-top rounded-2xl"
                      style={{"backgroundImage": `url(./header/bg-${image}.jpg)`}}>
                 <Container>
                     <div className="pt-[353px] pb-10 md:py-[86px] lg:py-[75px]">

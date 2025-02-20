@@ -12,7 +12,7 @@ const Header:FC<object> = () => {
 
     return (
         <header>
-            <div className="bg-cover bg-no-repeat bg-top rounded-2xl" style={{"backgroundImage": `url(./header/bg-${image}.jpg)`}}>
+            <div className="bg-contain bg-no-repeat bg-top rounded-2xl" style={{"backgroundImage": `url(./header/bg-${image}.jpg)`}}>
                 <Container className="relative">
                     <div className="pt-[342px] pb-4 ml-[6px] text-center relative
                          md:pt-[111px] md:pb-[110px] md:max-w-[301px] md:text-left
