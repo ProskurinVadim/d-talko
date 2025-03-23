@@ -1,13 +1,16 @@
 "use client"
 import {FC} from "react";
-import Button from "@/app/components/common/Button";
+import Link from "next/link";
+import {button} from "@/app/components/common/Button/button.tailwind";
 
 interface Props {
     className?: string;
     inverse?: boolean;
+    href?: string;
+    scroll?: boolean;
 }
-const NavbarButton:FC<Props> = ({className="", inverse}) => (
-    <Button tlwVar={{type: inverse ? "inverse" : "primary"}} className={className} onClick={()=>null}>Записатись на консультацію</Button>
+const ConsultButton:FC<Props> = ({className="", inverse, href="/modal/form", scroll=true}) => (
+    <Link href={href} scroll={scroll} className={`${className} ${button({type: inverse ? "inverse" : "primary"})}`}>Записатись на консультацію</Link>
 )
 
-export default NavbarButton;
+export default ConsultButton;

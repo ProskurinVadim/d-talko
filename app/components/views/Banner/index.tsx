@@ -4,11 +4,12 @@ import ConsultButton from "@/app/components/shared/ConsultButton";
 import Container from "@/app/components/shared/Container";
 import useResponsiveValue from "@/app/lib/getWidth";
 import SectionTitle from "../../common/SectionTitle";
+import ImageContainer from "@/app/components/shared/ImageContainer";
 const Banner:FC<object> = () => {
     const image = useResponsiveValue('desktop', 'tablet', 'mobile');
     return(
         <section>
-            <div className="relative bg-contain bg-top bg-no-repeat rounded-2xl md:py-[125px] lg:py-[179px]" style={{"backgroundImage": `url(./banner/bg-${image}.jpg)`}}>
+            <ImageContainer className="md:py-[125px] lg:py-[179px]" backgroundImage={`./banner/bg-${image}.jpg`}>
                 <Container>
                     <SectionTitle className="pt-[316px] md:pt-0 md:w-[430px] lg:w-[596px]" tlwVar={{position: "center", type: "large"}}>
                         Почни лікування сьогодні!
@@ -20,9 +21,9 @@ const Banner:FC<object> = () => {
                     ">
                         Запишіться на консультацію та отримайте персоналізований план лікування від досвідченого онкодерматолога.
                     </p>
-                    <ConsultButton />
+                    <ConsultButton href="#form"/>
                 </Container>
-            </div>
+            </ImageContainer>
         </section>
     )
 }

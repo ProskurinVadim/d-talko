@@ -1,7 +1,7 @@
 "use client"
 import {FC} from 'react'
-import Button from "@/app/components/common/Button";
-
+import Link from 'next/link';
+import { button } from '@/app/components/common/Button/button.tailwind';
 interface Props {
     className?: string;
 }
@@ -14,7 +14,7 @@ const ContactTelegram:FC<Props> = ({className = ''}) => {
             ">
                 Залишились питання? Напишіть нам в Телеграм і ми дамо вам відповіді!
             </p>
-            <Button className="block mt-3 md:mt-4 md:mx-auto lg:mt-6 lg:mx-0" onClick={() => null}>Написати у Телеграм</Button>
+            <Link href="https://t.me/daxak4" target='_blank' className={`${button({type: "primary"})} block mt-3 md:mt-4 md:mx-auto lg:mt-6 lg:mx-0`}>Написати у Телеграм</Link>
         </div>
     )
 }

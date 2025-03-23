@@ -11,7 +11,7 @@ const Services: FC<object> = () => {
                 <SectionTitle>Наші послуги</SectionTitle>
                 <p className="text-additional_light leading-[120%] mt-3 mb-10 text-sm
                 md:max-w-[452px] mt:mt-4 md:mb-12 md:text-base
-                lg:text-lg lg:mb-16 "
+                lg:text-lg lg:mb-16 lg:max-w-full"
                 >
                     Професійна допомога в діагностиці та лікуванні шкірних новоутворень
                 </p>

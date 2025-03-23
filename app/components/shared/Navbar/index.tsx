@@ -20,8 +20,9 @@ export const NAVBAR_LINKS_DATA: Link[] = [
 
 const Navbar: FC<object> = () => {
     return(
-        <Container>
-            <nav className="flex justify-between py-6 items-center flex-wrap lg:flex-nowrap">
+        <nav className="fixed w-full bg-white z-[10000]">
+            <Container className="">
+                <div className='flex justify-between py-6 items-center flex-wrap lg:flex-nowrap '>
                 <Logo />
                 <ul className="hidden lg:flex">
                     {NAVBAR_LINKS_DATA.map((elem,i) =>
@@ -30,8 +31,9 @@ const Navbar: FC<object> = () => {
                 </ul>
                 <ConsultButton className="hidden lg:block"/>
                 <NavbarMobile />
-            </nav>
-        </Container>
+                </div>
+            </Container>
+        </nav>
     )
 }
 

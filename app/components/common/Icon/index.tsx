@@ -1,5 +1,6 @@
 import {FC} from "react";
 import Image from 'next/image';
+import Link from "next/link";
 
 interface Pros {
     src: "viber" | "telegram";
@@ -14,3 +15,14 @@ const Icon:FC<Pros> = ({src, className=""}) => {
 
 export default Icon
 
+export const Telegram: FC<object> = () => {
+    return (
+        <Link href="https://t.me/daxak4" target="_blank"><Icon src="telegram" /></Link>
+    )
+}
+
+export const Viber: FC<object> = () => {
+    return (
+        <Link href="https://t.me/daxak4" target="_blank"><Icon className="mr-3" src="viber" /></Link>   
+    )
+}

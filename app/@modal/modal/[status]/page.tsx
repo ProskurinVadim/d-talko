@@ -36,19 +36,21 @@ const StatusModalPage:FC<Props> = async({ params }) => {
 
 
     return (
-        <Modal className="px-6 pt-6 pb-[62px] lg:max-w-[800px] text-center">
-            <div className="lg:max-w-[474px]">
+        <Modal className="px-6 pt-6 pb-[62px] lg:max-w-[800px] text-center rounded-xl">
+            <div className='p-6'>
                 <Link href="/" className='ml-auto flex justify-end'>
                     <span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
-                            <path d="M2.3335 25.2495L25.249 2.33402" stroke="#D3D3D3" stroke-width="3" stroke-linecap="round"/>
-                            <path d="M2.3335 2.3335L25.249 25.249" stroke="#D3D3D3" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M2.3335 25.2495L25.249 2.33402" stroke="#D3D3D3" strokeWidth="3" strokeLinecap="round"/>
+                            <path d="M2.3335 2.3335L25.249 25.249" stroke="#D3D3D3" strokeWidth="3" strokeLinecap="round"/>
                         </svg>
                     </span>
                 </Link>
-                <SectionTitle tlwVar={{color: status === "error" ? "danger" : "main_dark", type:"modal"}} className="mt-6">{data.title}</SectionTitle>
-                <Text tlwVar={{type: "normal", color: "additional_light", leading: "normal"}} className="mt-4">{data.text}</Text>
-                <Link className={`block mt-12 ${button({type:"primary"})}`} href="/">На головну</Link>
+                <div className="lg:max-w-[474px]">
+                    <SectionTitle tlwVar={{color: status === "error" ? "danger" : "main_dark", type:"modal"}} className="mt-6">{data.title}</SectionTitle>
+                    <Text tlwVar={{type: "normal", color: "additional_light", leading: "normal"}} className="mt-4">{data.text}</Text>
+                    <Link className={`block mt-12 ${button({type:"primary"})}`} href="/">На головну</Link>
+                </div>
             </div>
         </Modal>
     );

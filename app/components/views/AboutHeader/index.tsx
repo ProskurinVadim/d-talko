@@ -6,6 +6,7 @@ import Container from "@/app/components/shared/Container";
 import {CheckIcon, SectionTitle, Text} from "../../common/";
 import ConsultButton from "@/app/components/shared/ConsultButton";
 import useResponsiveValue from "@/app/lib/getWidth";
+import ImageContainer from "@/app/components/shared/ImageContainer";
 
 const AboutHeader:FC<object> = () => {
 
@@ -14,14 +15,15 @@ const AboutHeader:FC<object> = () => {
 
     const textClassName = "flex items-center";
     return (
-        <header>
+        <header className='pt-[72px] md:pt-[88px] lg:pt-[99px]'>
             <Container>
                 <Text className="hidden lg:inline-block"
-                      tlwVar={{type: "normal", color: "main", leading: "smallest"}}><Link href="/">Головна / </Link>Про
-                    лікаря</Text>
-            </Container> 
-            <div  className="relative bg-contain bg-no-repeat bg-top rounded-2xl"
-                     style={{"backgroundImage": `url(./header/bg-${image}.jpg)`}}>
+                      tlwVar={{type: "normal", color: "main", leading: "smallest"}}>
+                    <Link href="/">Головна / </Link>
+                    <span className='font-semibold'>Про лікаря</span>
+                </Text>
+            </Container>
+            <ImageContainer className="relative bg-contain bg-no-repeat bg-top rounded-2xl" backgroundImage={`./header/bg-${image}.jpg`}>
                 <Container>
                     <div className="pt-[353px] pb-10 md:py-[86px] lg:py-[75px]">
                         <Text tlwVar={{type: "medium", color: "light_green", leading: "smallest"}}>
@@ -45,7 +47,7 @@ const AboutHeader:FC<object> = () => {
                         <ConsultButton className="mt-8 md:mt-14 " inverse={true}/>
                     </div>
                 </Container>
-            </div>
+            </ImageContainer>
         </header>
     )
 }

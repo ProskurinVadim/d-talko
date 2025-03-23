@@ -18,7 +18,7 @@ const ServiceItem:FC<Item> = ({title, description, image}) => {
                 <p className="text-additional border-b border-main_inverse_light pb-8 md:pb-12 text-sm mt-3 lg:mt-4 leading-[135%]">
                     {description}
                 </p>
-                <ServiceButton />
+                <ServiceButton name={title}/>
             </div>
         </li>
     )

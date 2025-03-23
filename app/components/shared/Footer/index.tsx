@@ -2,6 +2,7 @@ import {FC} from "react";
 import Logo from "../../common/Logo";
 import { Icon, Heading, Text } from "../../common";
 import Container from "../../shared/Container";
+import { Telegram, Viber } from "../../common/Icon";
 
 const Footer:FC<object> = () => {
 
@@ -13,8 +14,8 @@ const Footer:FC<object> = () => {
                     <div className="pb-12">
                         <Heading tlwVar={{leading:"large"}}>Напишіть нам:</Heading>
                         <span className="flex justify-center mt-4 md:justify-start">
-                            <Icon className="mr-3" src="viber" />
-                            <Icon src="telegram" />
+                            <Viber />
+                            <Telegram />
                         </span>
                     </div>
                     </div>

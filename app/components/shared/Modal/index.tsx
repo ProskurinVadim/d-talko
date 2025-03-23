@@ -18,7 +18,7 @@ const Modal:FC<{children: ReactNode, className?: string}> = ({ children, classNa
 
   return (
     <div className={"fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"}>
-      <div ref={modalRef} className={`bg-white p-6 rounded shadow-lg ${className}`}>
+      <div ref={modalRef} className={`bg-white shadow-lg ${className}`}>
         {children}
       </div>
     </div>

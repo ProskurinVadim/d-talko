@@ -5,20 +5,22 @@ import ConsultButton from "@/app/components/shared/ConsultButton";
 import Container from "@/app/components/shared/Container";
 import useResponsiveValue from "@/app/lib/getWidth";
 import SectionTitle from "../../common/SectionTitle";
+import ImageContainer from "@/app/components/shared/ImageContainer";
 
 const Header:FC<object> = () => {
 
     const image = useResponsiveValue('desktop', 'tablet', 'mobile');
 
     return (
-        <header>
-            <div className="bg-contain bg-no-repeat bg-top rounded-2xl" style={{"backgroundImage": `url(./header/bg-${image}.jpg)`}}>
-                <Container className="relative">
-                    <div className="pt-[342px] pb-4 ml-[6px] text-center relative
+        <header className='pt-[72px] md:pt-[88px] lg:pt-[99px]'>
+            <ImageContainer backgroundImage={`./header/bg-${image}.jpg`}>
+                <Container>
+                    <div className="pt-[342px] pb-4 text-center
                          md:pt-[111px] md:pb-[110px] md:max-w-[301px] md:text-left
-                         lg:pt-[141px] lg:pb-[140px] lg:ml-20 lg:max-w-[550px]"
+                         lg:pt-[141px] lg:pb-[140px] lg:max-w-[550px]
+                         "
                     >
-                        <SectionTitle tlwVar={{type: "large"}}>
+                        <SectionTitle tlwVar={{type: "large", color: "main_dark"}}>
                             Подбайте про здоров&#39;я шкіри зараз!
                         </SectionTitle>
                         <p className="text-additional leading-[140%]
@@ -29,10 +31,10 @@ const Header:FC<object> = () => {
                             Запишіться на консультацію та отримайте персоналізований план лікування від досвідченого
                             онкодерматолога.
                         </p>
-                        <ConsultButton inverse={true}/>
+                        <ConsultButton href="#form" inverse={true} />
                     </div>
                 </Container>
-            </div>
+            </ImageContainer>
         </header>
     )
 }
