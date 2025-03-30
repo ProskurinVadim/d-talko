@@ -25,7 +25,7 @@ const AboutHeader:FC<object> = () => {
             </Container>
             <ImageContainer className="relative bg-contain bg-no-repeat bg-top rounded-2xl" backgroundImage={`./header/bg-${image}.jpg`}>
                 <Container>
-                    <div className="pt-[353px] pb-10 md:py-[86px] lg:py-[75px]">
+                    <div className="pt-[353px] pb-10 md:max-w-[304px] md:py-[86px] lg:py-[75px] lg:max-w-[560px]">
                         <Text tlwVar={{type: "medium", color: "light_green", leading: "smallest"}}>
                             Дерматохірург
                         </Text>
