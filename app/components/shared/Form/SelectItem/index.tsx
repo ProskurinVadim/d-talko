@@ -16,7 +16,7 @@ export interface Props extends  FormField{
 }
 export const OPTIONS = ["консультація та діагностика","Дитяча хірургія та урологія", "лікування новоутворень", "видалення пухлин", "Профілактика", "Реабілітація"];
 
-const SelectItem:FC<Props> = ({title, value, onChange, id, checked, type="text", className="", tlwVar={}}) => {
+const SelectItem:FC<Props> = ({title, value, onChange, id, className="", tlwVar={}}) => {
     const {
         field: tlwField = {type:"normal"}, 
         input: tlwInput = {type:"small"},

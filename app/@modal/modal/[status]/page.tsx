@@ -3,16 +3,17 @@ import {notFound, useRouter} from 'next/navigation';
 import Modal from '@/app/components/shared/Modal';
 import { SectionTitle, Text } from '@/app/components/common';
 import { button } from '@/app/components/common/Button/button.tailwind';
-import { FC } from 'react';
+import {FC, use} from 'react';
 import Link from 'next/link';
 
 interface Props {
-    params:  Promise<{ status: string | never }>;
+    params:  Promise<{status:string}>;
 }
 
-const StatusModalPage:FC<Props> = async({ params }) => {
+const StatusModalPage:FC<Props> = ({ params }) => {
+    const { status } = use(params);
+
     const router = useRouter();
-    const {status} = await params;
     const goBack = () => {
         router.back();
     }

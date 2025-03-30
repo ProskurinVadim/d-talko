@@ -1,7 +1,7 @@
 "use client"
 import {FC} from 'react';
 import Container from "../../shared/Container/index"
-import { Text, SectionTitle, Heading, Icon } from '../../common';
+import { Text, SectionTitle, Heading } from '../../common';
 import { VariantProps } from 'tailwind-variants';
 import { h3 } from '../../common/Heading/heading.tailwind';
 import useResponsiveValue from '@/app/lib/getWidth';

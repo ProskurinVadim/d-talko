@@ -1,6 +1,6 @@
 import {FC} from "react";
 import Logo from "../../common/Logo";
-import { Icon, Heading, Text } from "../../common";
+import { Heading, Text } from "../../common";
 import Container from "../../shared/Container";
 import { Telegram, Viber } from "../../common/Icon";
 
