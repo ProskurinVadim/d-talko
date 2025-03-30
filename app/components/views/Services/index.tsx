@@ -6,7 +6,7 @@ import SectionTitle from "../../common/SectionTitle";
 
 const Services: FC<object> = () => {
     return (
-        <section className="bg-additional_inverse py-10 md:py-[60px] lg:py-[100px]">
+        <section className="bg-additional_inverse py-10 md:py-[60px] lg:py-[100px]" id='services'>
             <Container>
                 <SectionTitle>Наші послуги</SectionTitle>
                 <p className="text-additional_light leading-[120%] mt-3 mb-10 text-sm

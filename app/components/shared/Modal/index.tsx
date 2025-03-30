@@ -1,28 +1,50 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import { useEffect, useRef, ReactNode, FC } from 'react';
+import { useEffect, useRef, ReactNode, FC, useState } from 'react';
 
-const Modal:FC<{children: ReactNode, className?: string}> = ({ children, className="" }) => {
+const Modal: FC<{ children: ReactNode, className?: string }> = ({ children, className = "" }) => {
   const router = useRouter();
   const modalRef = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
+  const closeModal = () => {
+    setIsVisible(false);
+    setTimeout(() => {
+      router.back(); // переход назад после анимации
+    }, 300); // тайминг должен совпадать с transition duration
+  };
+
+
+  // Анимация появления
+  useEffect(() => {
+    setTimeout(() => setIsVisible(true), 10); // дать время DOM отрендериться
+  }, []);
+
+  // Закрытие по клику вне
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
-        router.back();
+        closeModal();
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [router]);
+  }, [router, closeModal]);
 
   return (
-    <div className={"fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"}>
-      <div ref={modalRef} className={`bg-white shadow-lg ${className}`}>
-        {children}
+      <div
+          className={`fixed inset-0 z-40 flex items-center justify-center transition-opacity duration-300 ${
+              isVisible ? 'bg-black bg-opacity-50 opacity-100' : 'opacity-0 pointer-events-none'
+          }`}
+      >
+        <div
+            ref={modalRef}
+            className={`transform transition-all duration-300 ease-out ${isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'} bg-white shadow-lg ${className}`}
+        >
+          {children}
+        </div>
       </div>
-    </div>
   );
-}
+};
 
-export default Modal
+export default Modal;

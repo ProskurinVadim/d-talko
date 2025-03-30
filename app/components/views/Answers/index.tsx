@@ -11,7 +11,7 @@ const Answer:FC<object> = () => {
     const [open,setOpen] = useState<string>(DATA[0].id)
 
     return (
-        <section className="py-10 md:py-[60px] lg:pt-[80px] lg:pb-[100px]">
+        <section className="py-10 md:py-[60px] lg:pt-[80px] lg:pb-[100px]" id="faq">
             <Container>
                 <div className="flex flex-col items-center gap-6 lg:justify-between lg:flex-row ">
                     <div className="flex flex-col">

@@ -23,7 +23,7 @@ const Advantages: FC<object> = () => {
         }
     ]
     return (
-        <section className="my-10 md:my-[60px] lg:my-20">
+        <section className="my-10 md:my-[60px] lg:my-20" id="advantages">
             <Container>
                 <ul className="flex flex-wrap gap-4 lg:gap-5 lg:flex-nowrap">
                     {DATA.map((elem, i) => <AdvantageItem key={`advantage-item-${i}`} {...elem} />)}

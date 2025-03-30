@@ -79,7 +79,7 @@ const Form:FC<Props> = ({fieldClassNames = {}, className = "", service = ""}) =>
         if(error) {
             router.push('/modal/error')
         } else {
-            router.push('/modal/succes')
+            router.push('/modal/success')
         }
         console.log(error)
     };

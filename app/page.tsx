@@ -6,7 +6,7 @@ import Banner from "@/app/components/views/Banner";
 import Reviews from "@/app/components/views/Reviews";
 import Answer from "@/app/components/views/Answers";
 import BookForm from "@/app/components/views/BookForm";
-import Contacs from "./components/views/Contacts";
+import Contacts from "./components/views/Contacts";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
           <Reviews />
           <Answer />
           <BookForm />
-          <Contacs />
+          <Contacts />
       </>
   );
 }

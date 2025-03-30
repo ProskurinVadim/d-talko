@@ -4,7 +4,7 @@ import Specialization from "@/app/components/views/Specialization";
 import Summary from "../components/views/Summary";
 import Reviews from "../components/views/Reviews";
 import BookForm from "../components/views/BookForm";
-import Contacs from "../components/views/Contacts";
+import Contacts from "../components/views/Contacts";
 
 export default function About() {
     return (
@@ -15,7 +15,7 @@ export default function About() {
             <Summary />
             <Reviews />
             <BookForm />
-            <Contacs />
+            <Contacts />
         </>
     )
 }

@@ -16,7 +16,7 @@ const Reviews:FC<object> = () =>  {
         setMaxPage ((DATA.length/num) - 1);
     },[])
     return (
-        <section className="py-10 md:pt-[69px] md:pb-[60px] lg:pt-[100px] lg:pb-[80px]">
+        <section className="py-10 md:pt-[69px] md:pb-[60px] lg:pt-[100px] lg:pb-[80px]" id="reviews">
             <Container>
                 <div className="flex justify-center items-center md:justify-between">
                     <SectionTitle>

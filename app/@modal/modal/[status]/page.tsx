@@ -12,7 +12,7 @@ interface Props {
 
 const StatusModalPage:FC<Props> = ({ params }) => {
     const { status } = use(params);
-
+    console.log(status)
     const router = useRouter();
     const goBack = () => {
         router.back();
