@@ -2,19 +2,20 @@ import {FC} from 'react'
 import {FormField} from "@/app/components/shared/Form";
 import {field, input, label} from "./form-item.tailwind";
 import { VariantProps } from 'tailwind-variants';
+import ErrorText from '../ErrorText';
 
-export interface Props extends  FormField{
+export interface Props extends FormField{
     onChange: (value: string, name: string) => void;
     value: string;
     className?: string;
     tlwVar?: {
-        input?: VariantProps<typeof input>,
-        field?: VariantProps<typeof field> 
-        label?: VariantProps<typeof label>
+        input?: VariantProps<typeof input>;
+        field?: VariantProps<typeof field>; 
+        label?: VariantProps<typeof label>;
     }
 }
 
-const FormItem:FC<Props> = ({title, value, onChange, id, className="", type = 'text', tlwVar={}}) => {
+const FormItem:FC<Props> = ({title, value, onChange, id, className="", type = 'text', tlwVar={}, errorText}) => {
     const {
         field: tlwField = {type:"normal"}, 
         input: tlwInput = {type:"small"},
@@ -23,7 +24,8 @@ const FormItem:FC<Props> = ({title, value, onChange, id, className="", type = 't
     return (
         <div className={`${field(tlwField)} ${className}`}>
             <label className={label(tlwLabel)} htmlFor={id}>{title}</label>
-            <input className={input(tlwInput)} onChange={(e) => onChange(e.target.value, id)} value={value} name={id} id={id} type={type}/>
+            <input className={`${input(tlwInput)} ${errorText ? "border-error": ""}`} onChange={(e) => onChange(e.target.value, id)} value={value} name={id} id={id} type={type}/>
+            <ErrorText errorText={errorText} />
         </div>
     )
 }

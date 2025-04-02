@@ -2,6 +2,7 @@ import {FC} from 'react'
 import {FormField} from "@/app/components/shared/Form";
 import {field, input, label} from "../FormItem/form-item.tailwind";
 import { VariantProps } from 'tailwind-variants';
+import ErrorText from '../ErrorText';
 
 export interface Props extends  FormField{
     onChange: (value: string, name: string) => void;
@@ -16,7 +17,7 @@ export interface Props extends  FormField{
 }
 export const OPTIONS = ["консультація та діагностика","Дитяча хірургія та урологія", "лікування новоутворень", "видалення пухлин", "Профілактика", "Реабілітація"];
 
-const SelectItem:FC<Props> = ({title, value, onChange, id, className="", tlwVar={}}) => {
+const SelectItem:FC<Props> = ({title, value, onChange, id, className="", tlwVar={}, errorText}) => {
     const {
         field: tlwField = {type:"normal"}, 
         input: tlwInput = {type:"small"},
@@ -27,8 +28,12 @@ const SelectItem:FC<Props> = ({title, value, onChange, id, className="", tlwVar=
         <div className={`${field(tlwField)} ${className}`}>
             <label className={label(tlwLabel)} htmlFor={id}>{title}</label>
             <select className={input(tlwInput)} onChange={(e) => onChange(e.target.value, id)} value={value} name={id} id={id}>
+                <option value="" disabled hidden>
+                    Обрати послугу
+                </option>
                 {OPTIONS.map((elem,i) => <option value={elem} key={`select-option-item-${i}`}>{elem}</option>)}
             </select>
+            <ErrorText errorText={errorText} />
         </div>
     )
 }

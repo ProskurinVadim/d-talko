@@ -19,12 +19,12 @@ const Contacts:FC<object> = () => {
             <ImageContainer className="h-[798px] md:h-[603px] lg:h-[726px] relative">
                 <Link href="https://g.co/kgs/AziZHZR" className='bg-cover bg-no-repeat bg-top rounded-2xl cursor-pointer absolute top-0 left-0 right-0 bottom-0 h-[294px] md:h-full' style={{"backgroundImage": `url(./map/bg-${image}.jpg)`}}>
                 </Link>
-                <Container className='top-[308px] md:top-0 absolute left-0 z-[5]'>
+                <Container className='top-[308px] md:top-0 absolute right-0 left-0 z-[5]'>
                     <div className="cursor-auto bg-white md:bg-transparent text-center pt-[11px] pb-10 md:text-left md:py-[60px] md:px-[44px] md:w-[343px] lg:w-[550px] lg:p-20 ">
-                        <SectionTitle tlwVar={{type:"large"}}>Контакти</SectionTitle>
+                        <SectionTitle tlwVar={{type:"large_smallest_mobile"}}>Контакти</SectionTitle>
                         <Heading tlwVar={h3Tlw} className='mb-2 mt-8 md:mt-14'>Телефон:</Heading>
                         <Text className="lg:text-xl">+380981333098</Text>
-                        <Heading tlwVar={h3Tlw} className='mb-2 mt--7 lg:mt-8'>Адреса</Heading>
+                        <Heading tlwVar={h3Tlw} className='mb-2 mt-7 lg:mt-8'>Адреса</Heading>
                         <Text className="lg:text-xl">Клініка “Mediland” - м. Київ, вул. Ростиславська 11б</Text>                            <Text className="mt-3 lg:text-xl">Київська міська дитяча лікарня - м. Київ, вул. Богатирська 30</Text>
                         <Heading tlwVar={h3Tlw} className='mb-2 mt-7 lg:mt-8'>Час роботи:</Heading>
                         <Text className='mt-3 lg:text-xl'>Пн - Пт: з 10:00 до 19:00 </Text>

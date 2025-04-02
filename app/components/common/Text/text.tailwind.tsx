@@ -12,7 +12,7 @@ export const p = tv({
         text_sm: "text-sm",
         normal: "text-sm md:text-base",
         medium: "text-sm md:text-base lg:text-lg",
-        medium_large: "md:t"
+        medium_large: "md:t",
       },
       leading: {
         smallest: "leading-[120%]",

@@ -22,6 +22,7 @@ export default {
         semi_dark: "rgba(140, 187, 187, 0.12)",
         background: "var(--background)",
         foreground: "var(--foreground)",
+        error: "#FF0000",
         label: "#33343CB2",
         placeholder: "#8E8E93"
       },
@@ -39,6 +40,12 @@ export default {
       backgroundImage: {
         'main-image-gradient': 'linear-gradient(to right, #fff 36%, #fff0 66%)',
       },
+    },
+  },
+  variants: {
+    extend: {
+      backgroundColor: ['checked'],
+      borderColor: ['checked'],
     },
   },
   plugins: [],

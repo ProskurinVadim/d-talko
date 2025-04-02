@@ -7,7 +7,7 @@ import { Telegram, Viber } from "../../common/Icon";
 const Footer:FC<object> = () => {
 
     return (
-        <footer className="lg:mt-[100px] lg:mb-8">
+        <footer className="hidden md:block lg:mt-[100px] lg:mb-8">
             <Container>
                 <div className="flex justify-between items-center">
                     <Logo />
