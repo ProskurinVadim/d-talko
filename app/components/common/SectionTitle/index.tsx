@@ -9,7 +9,7 @@ interface Props {
 
 const SectionTitle: FC<Props> = ({children, className="", tlwVar = {}}) => {
     const {type = "common", position, color = "main"} = tlwVar
-    return <h2 className={`${className} ${h2({type, position, color})}`}>{children}</h2>
+    return <h2 className={`${h2({type, position, color})} ${className}`}>{children}</h2>
 }
 
 export default SectionTitle

@@ -12,7 +12,7 @@ interface Props {
 const Button: FC<Props> = ({children, onClick, className = "", tlwVar={}}) => {
     const {type="primary"} = tlwVar;
     return (
-        <button className={`${className} ${button({type})}`} onClick={onClick}>{children}</button>
+        <button className={`${button({type})} ${className} `} onClick={onClick}>{children}</button>
     )
 } 
 

@@ -29,7 +29,7 @@ const AnswerItem: FC<Item> = ({title, description, isOpen, id, setOpen}) => {
             className={`p-6 rounded-lg w-full transition-all duration-300 ${isOpen ? "border-l-8 border-main bg-white" : "bg-additional_inverse cursor-pointer"}`}
         >
             <div className="flex justify-between items-start">
-                <h3 className="text-main font-semibold leading-title text-lg">{title}</h3>
+                <h3 className="text-main font-semibold !leading-none  md:text-lg">{title}</h3>
                 <Image
                     width={16}
                     height={16}
@@ -42,7 +42,7 @@ const AnswerItem: FC<Item> = ({title, description, isOpen, id, setOpen}) => {
                 style={{ maxHeight: height }}
                 className="transition-all duration-500 ease-in-out overflow-hidden"
             >
-                <p ref={contentRef} className="mt-6 leading-description">
+                <p ref={contentRef} className="mt-6 leading-description text-sm">
                     {description}
                 </p>
             </div>

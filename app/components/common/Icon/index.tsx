@@ -2,9 +2,12 @@ import {FC} from "react";
 import Image from 'next/image';
 import Link from "next/link";
 
-interface Pros {
-    src: "viber" | "telegram";
+interface NoSrcProps {
     className?: string;
+}
+
+interface Pros extends NoSrcProps {
+    src: "viber" | "telegram";
 }
 
 const Icon:FC<Pros> = ({src, className=""}) => {
@@ -15,14 +18,14 @@ const Icon:FC<Pros> = ({src, className=""}) => {
 
 export default Icon
 
-export const Telegram: FC<object> = () => {
+export const Telegram: FC<NoSrcProps> = ({className = ""}) => {
     return (
-        <Link href="https://t.me/daxak4" target="_blank"><Icon src="telegram" /></Link>
+        <Link className={className} href="https://t.me/daxak4" target="_blank"><Icon src="telegram" /></Link>
     )
 }
 
-export const Viber: FC<object> = () => {
+export const Viber: FC<NoSrcProps> = ({className = ""}) => {
     return (
-        <Link href="https://t.me/daxak4" target="_blank"><Icon className="mr-3" src="viber" /></Link>   
+        <Link className={className} href="https://t.me/daxak4" target="_blank"><Icon className="mr-3" src="viber" /></Link>
     )
 }

@@ -15,15 +15,15 @@ const Header:FC<object> = () => {
         <header className='pt-[72px] md:pt-[88px] lg:pt-[99px]'>
             <ImageContainer backgroundImage={`./header/bg-${image}.jpg`}>
                 <Container>
-                    <div className="pt-[342px] pb-4 text-center
+                    <div className="pt-[326px] pb-4 text-center
                          md:pt-[111px] md:pb-[110px] md:max-w-[301px] md:text-left
                          lg:pt-[141px] lg:pb-[140px] lg:max-w-[550px]
                          "
                     >
-                        <SectionTitle tlwVar={{type: "large", color: "main_dark"}}>
+                        <SectionTitle tlwVar={{type: "large_small_mobile", color: "main_dark"}} className="mt-[15px] md:mt-0 text-[28px]">
                             Подбайте про здоров&#39;я шкіри зараз!
                         </SectionTitle>
-                        <p className="text-additional leading-[140%]
+                        <p className="text-additional !leading-[140%]
                             text-[12px] mt-2 mb-[40px]
                             md:text-sm md:mt-4
                             lg:text-lg lg:mt-6 lg:mb-16"

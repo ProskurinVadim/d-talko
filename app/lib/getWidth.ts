@@ -5,7 +5,7 @@ type value = string | number;
 
 export const getWidth = (desktop: value, tablet: value, mobile: value): value => {
     const innerWidth = window.innerWidth;
-    return innerWidth > 1024 ? desktop : innerWidth > 768 ? tablet : mobile;
+    return innerWidth > 1024 ? desktop : innerWidth >= 768 ? tablet : mobile;
 };
 
 const useResponsiveValue = (desktop: value, tablet: value, mobile: value): value => {

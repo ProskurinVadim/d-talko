@@ -11,7 +11,7 @@ const AdvantageButton:FC<object> = () => {
 
     return(
         pathname === "/about" ? <></> 
-        : <Button className="block  mx-auto mt-8 md:mt-10 lg:mt-[52px]" onClick={()=>  router.push('/about')} tlwVar={{type: "inverse"}}>Детальніше про лікаря</Button>
+        : <Button className="mx-auto mt-8 w-full md-w-[246px] md:mt-10  lg:mt-[52px]" onClick={()=>  router.push('/about')}>Детальніше про лікаря</Button>
     )
 }
 

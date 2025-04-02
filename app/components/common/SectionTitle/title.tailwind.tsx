@@ -10,13 +10,14 @@ export const h2 = tv({
             main_light: "text-[#2B8478]",
         },
         type: {
-            smallest: "text-[18px] md:text-[24px] leading-title",
-            common: "text-2xl md:text-[32px] lg:text-5xl leading-title",
-            large: "text-[32px] md:text-[40px] lg:text-[64px] leading-title",
+            smallest: "text-[18px] md:text-[24px] !leading-title",
+            common: "text-2xl md:text-[32px] lg:text-5xl !leading-title",
+            large: "text-[32px] md:text-[40px] lg:text-[64px] !leading-title",
+            large_small_mobile: "text-[28px] md:text-[40px] lg:text-[64px] !leading-title_small",
             normal_large: "text-[24px] md:text-[32px] lg:text-[48px]",
-            semi_large: "text-[32px] md:text-[40px] lg:text-[48px] leading-title",
-            small: "text-[32px] leading-[110%]",
-            modal: "text-[16px] md:text-[24px] lg:text-[32px] leading-[125%]"
+            semi_large: "text-[32px] md:text-[40px] lg:text-[48px] !leading-title",
+            small: "text-[32px] !leading-[110%]",
+            modal: "text-[16px] md:text-[24px] lg:text-[32px] !leading-[125%]"
         },
         position: {
             center: "text-center md:text-left"

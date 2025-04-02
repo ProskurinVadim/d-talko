@@ -10,7 +10,7 @@ interface Props {
     scroll?: boolean;
 }
 const ConsultButton:FC<Props> = ({className="", inverse, href="/modal/form", scroll=true}) => (
-    <Link href={href} scroll={scroll} className={`${className} ${button({type: inverse ? "inverse" : "primary"})}`}>Записатись на консультацію</Link>
+    <Link href={href} scroll={scroll} className={`${button({type: inverse ? "inverse" : "primary"})} ${className} lg:w-fit`}>Записатись на консультацію</Link>
 )
 
 export default ConsultButton;

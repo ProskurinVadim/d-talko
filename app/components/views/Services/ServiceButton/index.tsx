@@ -4,7 +4,7 @@ import {FC} from "react";
 import {button} from "@/app/components/common/Button/button.tailwind";
 
 const ServiceButton:FC<{name:string}> = ({name}) => {
-    return (<Link className={`block w-full mt-4 md:mt-6 ${button({type:"primary"})}`} href={`/modal/form?service=${name}`}>Записатись</Link>)
+    return (<Link className={`${button({type:"primary"})} !py-3 !text-[12px] leading-none font-bold md:w-full mt-4 md:mt-6`} href={`/modal/form?service=${name}`}>Записатись</Link>)
 }
 
 export default ServiceButton;

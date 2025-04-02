@@ -18,7 +18,7 @@ const BookForm:FC<object> = () => {
     const backgroundImage = image  !== "mobile" ? `/book-form/bg-${image}.jpg` : undefined;
 
     return(
-        <section className='py-10 md:py-[65px] lg:pt-16 lg:pb-12' id="form">
+        <section id="form">
             <ImageContainer backgroundImage={backgroundImage}>
                 <Container className="md:py-[60px] lg:py-0">
                     <div className='flex justify-center lg:justify-end'>

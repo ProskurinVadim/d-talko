@@ -14,8 +14,8 @@ const Answer:FC<object> = () => {
         <section className="py-10 md:py-[60px] lg:pt-[80px] lg:pb-[100px]" id="faq">
             <Container>
                 <div className="flex flex-col items-center gap-6 lg:justify-between lg:flex-row ">
-                    <div className="flex flex-col">
-                        <SectionTitle className="md:max-w-[397px] lg:max-w-[493px]" tlwVar={{position: "center"}}>
+                    <div className="flex flex-col md:self-baseline lg:self-center">
+                        <SectionTitle className="text-center md:text-left md:max-w-[397px] lg:max-w-[493px]">
                             Відповіді на поширені запитання
                         </SectionTitle>
                         <ContactTelegram className="text-left hidden lg:block mt-[216px]"/>

@@ -3,6 +3,7 @@ import {FC, useState} from "react";
 import Image from "next/image";
 import {NAVBAR_LINKS_DATA} from "@/app/components/shared/Navbar";
 import ConsultButton from "@/app/components/shared/ConsultButton";
+import { Telegram, Viber } from "../../../common/Icon";
 const NavbarMobile:FC<object> = () => {
     const [open,setOpen] = useState<boolean>(false);
 
@@ -10,8 +11,8 @@ const NavbarMobile:FC<object> = () => {
         <>
             <span className="lg:hidden" onClick={() => setOpen(prev => !prev)}>
                 {!open
-                    ? <Image width="24" height="24" alt="Burger menu" src="./burger-menu.svg"/>
-                    : <Image width="24" height="24" alt="Burger menu" src="./close-icon.svg"/>
+                    ? <Image className="md:w-8 md:h-6" width="19" height="14" alt="Open burger menu" src="./burger-menu.svg"/>
+                    : <Image className="md:w-8 md:h-6" width="19" height="14" alt="Close burger menu" src="./close-icon.svg"/>
                 }
             </span>
             <input checked={open} type="checkbox" className="hidden peer" onChange={()=>null}/>
@@ -25,10 +26,9 @@ const NavbarMobile:FC<object> = () => {
                 <div className="flex flex-wrap items-center justify-center gap-8">
                     <ConsultButton className="md:max-w-[328px]"/>
                     <div className="flex items-center md:mt-0">
-                        <p className="text-sm ml-4">Напишіть нам:</p>
-                        <Image className="ml-3" src="./telegram-icon.svg" alt="Message Telegram" width="36"
-                               height="36"/>
-                        <Image src="./viber-icon.svg" alt="Message Viber" width="36" height="36"/>
+                        <p className="text-sm mr-4">Напишіть нам:</p>
+                        <Telegram className="ml-3" />
+                        <Viber />
                     </div>
                 </div>
             </div>

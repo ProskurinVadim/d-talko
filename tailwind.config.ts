@@ -29,6 +29,7 @@ export default {
         inter: "Inter",
       },
       lineHeight: {
+        title_small: "110%",
         title: "120%",
         description: "140%",
         description_small: "135%",

@@ -10,17 +10,15 @@ const Modal: FC<{ children: ReactNode, className?: string }> = ({ children, clas
   const closeModal = () => {
     setIsVisible(false);
     setTimeout(() => {
-      router.back(); // переход назад после анимации
-    }, 300); // тайминг должен совпадать с transition duration
+      router.back();
+    }, 300);
   };
 
 
-  // Анимация появления
   useEffect(() => {
-    setTimeout(() => setIsVisible(true), 10); // дать время DOM отрендериться
+    setTimeout(() => setIsVisible(true), 10);
   }, []);
 
-  // Закрытие по клику вне
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (modalRef.current && !modalRef.current.contains(event.target as Node)) {

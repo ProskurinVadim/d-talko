@@ -23,12 +23,12 @@ const Navbar: FC<object> = () => {
     return(
         <nav className="fixed w-full bg-white z-10">
             <Container className="">
-                <div className='flex justify-between py-6 items-center flex-wrap lg:flex-nowrap '>
+                <div className='flex justify-between py-5 items-center flex-wrap lg:flex-nowrap md:py-6'>
                     <Link href="/"><Logo /></Link>
                     <ul className="hidden lg:flex">
                         {NAVBAR_LINKS_DATA.map((elem,i) =>
                             <Link href={elem.href}
-                                  className="mx-8 text-sm text-main relative group"
+                                  className="mx-8 text-sm text-main relative group leading-none"
                                   key={`navbar-item-${i}`}>
                                 {elem.text}
                                 <span
@@ -37,7 +37,7 @@ const Navbar: FC<object> = () => {
                             </Link>
                         )}
                     </ul>
-                    <ConsultButton className="hidden lg:block"/>
+                    <ConsultButton className="hidden md:hidden lg:block"/>
                     <NavbarMobile/>
                 </div>
             </Container>
