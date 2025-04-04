@@ -40,8 +40,8 @@ const Summary:FC<object> = () => {
     return (
         <section className="py-10 md:py-[60px] lg:pt-[100px] lg:pb-20 bg-additional_inverse text-center">
             <Container>
-                <SectionTitle tlwVar={{type: "normal_large", color: "main_dark"}} className="leading-[110%]">Освіта та карʼєра</SectionTitle>
-                <Text tlwVar={{color: "additional_light", type: "medium", leading: "smallest"}} className="mt-4">Професійна допомога в діагностиці та лікуванні шкірних новоутворень</Text>
+                <SectionTitle tlwVar={{type: "normal_large", color: "main_dark"}} className="leading-[120%]">Освіта та карʼєра</SectionTitle>
+                <Text tlwVar={{color: "additional_light", type: "medium", leading: "smallest"}} className="mt-4 mx-auto md:max-w-[452px] lg:max-w-full">Професійна допомога в діагностиці та лікуванні шкірних новоутворень</Text>
                 <Carousel index={page} className="gap-8 mt-8 md:mt-14 lg:mt-16">
                     <CarouselItem className="w-full lg:w-1/2 flex justify-center">
                         <div className="py-6 px-4 md:py-12 md:px-10 bg-white max-w-[592px] rounded-[12px]">
@@ -51,7 +51,7 @@ const Summary:FC<object> = () => {
                                     <SummaryItem key={`summary-education-item-${i}`} {...elem}/>
                                 )}
                             </ul>
-                            <Button onClick={expand} className="md:hidden">
+                            <Button onClick={expand} className="mt-6 md:hidden">
                                 {maxEducationItems === EDUCATION.length ? 'Згорнути' : 'Розгорнути'}
                             </Button>
                         </div>
@@ -64,7 +64,7 @@ const Summary:FC<object> = () => {
                                     <SummaryItem key={`summary-education-item-${i}`} {...elem}/>
                                 )}
                             </ul>
-                            <Button onClick={expand} className="md:hidden">
+                            <Button onClick={expand} className="mt-6 md:hidden">
                                 {maxExperienceItems === EXPERIENCE.length ? 'Згорнути' : 'Розгорнути'}
                             </Button>
                         </div>

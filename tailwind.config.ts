@@ -20,6 +20,7 @@ export default {
         additional_inverse_light: "#303036A3",
         semi_light: "rgba(255, 255, 255, 0.64)",
         semi_dark: "rgba(140, 187, 187, 0.12)",
+        link_unactive: "rgba(48, 48, 54, 0.32)",
         background: "var(--background)",
         foreground: "var(--foreground)",
         error: "#FF0000",

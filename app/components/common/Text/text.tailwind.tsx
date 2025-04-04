@@ -10,14 +10,15 @@ export const p = tv({
       },
       type: {
         text_sm: "text-sm",
-        normal: "text-sm md:text-base",
+        normal: "text-sm lg:text-base",
+        normal_small: "text-sm md:text-base",
         medium: "text-sm md:text-base lg:text-lg",
         medium_large: "md:t",
       },
       leading: {
-        smallest: "leading-[120%]",
-        small: "leading-[125%]",
-        normal: "leading-description"
+        smallest: "!leading-[120%]",
+        small: "!leading-[125%]",
+        normal: "!leading-description"
       }
     },
   });

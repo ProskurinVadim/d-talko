@@ -20,13 +20,13 @@ const Specialization:FC<object> = () => {
         <section>
             <div className="bg-contain bg-no-repeat bg-top pt-[319px] pb-10 md:py-[60px] rounded-2xl" style={{"backgroundImage": `url(./specialization/bg-${image}.jpg)`}}>
                 <Container className="flex justify-center md:justify-end">
-                    <div className="md:max-w-[493px]">
-                        <Text tlwVar={{leading: "smallest", color: "light_green"}} className="text-sm mt-[19px] font-semibold">Ваше здоров&#39;я — моя спеціалізація!</Text>
+                    <div className="md:max-w-[300px] lg:max-w-[493px]">
+                        <Text tlwVar={{leading: "smallest", color: "light_green"}} className="text-sm mt-[19px] md:mt-0 font-semibold">Ваше здоров&#39;я — моя спеціалізація!</Text>
                         <SectionTitle tlwVar={{type:"semi_large", color: "main_dark"}} className="mt:mt-2 md:mt-3">Що я лікую?</SectionTitle>
-                        <ul className="my-8 md:mb-10 lg:mt-12 lg:mb-14">
+                        <ul className="mt-[29px] mb-8 md:mb-10 lg:mt-12 lg:mb-14">
                             {text.map((elem,i) =>
-                                <li key={`specialization-list-item-${i}`} className="flex items-center">
-                                    <CheckIcon /><Text tlwVar={{type: "normal", leading: "smallest"}} className="mt-4 lg:mt-5">{elem}</Text>
+                                <li key={`specialization-list-item-${i}`} className="flex items-center mt-4 lg:mt-5">
+                                    <CheckIcon /><Text tlwVar={{type: "normal", leading: "smallest"}}>{elem}</Text>
                                 </li>
                             )}
                         </ul>

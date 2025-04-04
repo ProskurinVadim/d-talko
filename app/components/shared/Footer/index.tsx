@@ -7,11 +7,11 @@ import { Telegram, Viber } from "../../common/Icon";
 const Footer:FC<object> = () => {
 
     return (
-        <footer className="hidden md:block lg:mt-[100px] lg:mb-8">
+        <footer className="hidden md:block md:mt-[60px] md:mb-8 lg:mt-[100px] lg:mb-8">
             <Container>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center pb-12">
                     <Logo />
-                    <div className="pb-12">
+                    <div>
                         <Heading tlwVar={{leading:"large"}}>Напишіть нам:</Heading>
                         <span className="flex justify-center mt-4 md:justify-start">
                             <Viber />
@@ -19,10 +19,10 @@ const Footer:FC<object> = () => {
                         </span>
                     </div>
                     </div>
-                <div className="pt-8 bordeer-main_inverse_light border-solid border-t flex justify-center flex-col md:justify-between md:flex-row">
-                    <Text className="text-sm">Terms of Service & Privacy Policy</Text>
-                    <Text className="text-sm">© 2024 MaksymTalko. Всі права захищені</Text>
-                    <Text className="text-sm">Made by Team Valentyna Voitsitska</Text>
+                <div className="pt-8 bordeer-main_inverse_light border-solid border-t flex items-center gap-4 flex-col lg:justify-between lg:flex-row">
+                    <Text className="text-sm opacity-50">Terms of Service & Privacy Policy</Text>
+                    <Text className="text-sm opacity-50">© 2024 MaksymTalko. Всі права захищені</Text>
+                    <Text className="text-sm opacity-50">Made by Team Valentyna Voitsitska</Text>
                 </div>
             </Container>
         </footer>

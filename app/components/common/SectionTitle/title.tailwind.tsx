@@ -15,6 +15,7 @@ export const h2 = tv({
             large: "text-[32px] md:text-[40px] lg:text-[64px] !leading-title",
             large_small_mobile: "text-[28px] md:text-[40px] lg:text-[64px] !leading-title_small",
             large_smallest_mobile: "text-[24px] md:text-[32px] lg:text-[64px] !leading-title_small",
+            largest: "text-[32px] md:text-[40px] lg:text-[72px] !leading-title",
             normal_large: "text-[24px] md:text-[32px] lg:text-[48px]",
             semi_large: "text-[32px] md:text-[40px] lg:text-[48px] !leading-title",
             small: "text-[32px] !leading-[110%]",
