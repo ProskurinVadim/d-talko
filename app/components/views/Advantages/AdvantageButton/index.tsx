@@ -7,7 +7,6 @@ import { usePathname } from 'next/navigation'
 const AdvantageButton:FC<object> = () => {
     const router = useRouter();
     const pathname = usePathname()
-    console.log(pathname)
 
     return(
         pathname === "/about" ? <></> 

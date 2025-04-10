@@ -9,7 +9,7 @@ export interface Item {
     id: string;
 }
 
-const ServiceItem:FC<Item> = ({title, description, image}) => {
+const ServiceItem:FC<Item> = ({title, description, image, id}) => {
     return (
         <li className="w-full md:max-w-[324px] lg:max-w-[389px] bg-main_inverse rounded-xl">
             <Image className="w-full rounded-t-xl h-[171px] md:h-[193px] lg:h-[223px]" height="223" width='389' alt={`${title} image`} src={image}/>
@@ -18,7 +18,7 @@ const ServiceItem:FC<Item> = ({title, description, image}) => {
                 <p className="min-h-[48px] md:min-h-[57px] box-content text-additional border-b border-main_inverse_light pb-4 text-[12px] md:pb-6 md:text-sm mt-3 lg:mt-4 !leading-[135%]">
                     {description}
                 </p>
-                <ServiceButton name={title}/>
+                <ServiceButton id={id}/>
             </div>
         </li>
     )

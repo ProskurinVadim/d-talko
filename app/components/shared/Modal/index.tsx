@@ -16,7 +16,9 @@ const Modal: FC<{ children: ReactNode, className?: string }> = ({ children, clas
 
 
   useEffect(() => {
-    setTimeout(() => setIsVisible(true), 10);
+    setTimeout(() => {
+      setIsVisible(true)
+    }, 10)
   }, []);
 
   useEffect(() => {
@@ -26,7 +28,9 @@ const Modal: FC<{ children: ReactNode, className?: string }> = ({ children, clas
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
   }, [router, closeModal]);
 
   return (

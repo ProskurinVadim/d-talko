@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 const Default:FC<object> = () => {
-    return <></>
+    return null
 }
 
 export default Default

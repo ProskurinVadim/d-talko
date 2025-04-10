@@ -61,7 +61,7 @@ const Form:FC<Props> = ({fieldClassNames = {}, className = "", service = ""}) =>
 
     const [values, setValues] = useState<Values>({
         name: {value : ""}, phone: {value : "+380"}, comment: {value : ""},
-        service: {value : ""}, checkbox: {value : "Agreement", checked: false}
+        service: {value : service}, checkbox: {value : "Agreement", checked: false}
     })
 
     const handelSetError = (error:string[],value: string) => error.push(value);
@@ -73,7 +73,6 @@ const Form:FC<Props> = ({fieldClassNames = {}, className = "", service = ""}) =>
 
     const onChange = (value: string, name: string) => {
         const handelSetValue = () => setValues(elem => ({...elem, [name]: {value}}));
-        console.log(name, value.length)
         if(name === "phone") {
             if(isNaN(Number(value))) return;
             if(value.length > 13) return;
@@ -88,19 +87,19 @@ const Form:FC<Props> = ({fieldClassNames = {}, className = "", service = ""}) =>
 
     const onSubmit = () => {
         const err: string[] = [];
-        console.log(values);
         if(!values.name.value.length) handelSetError(err,"name");
-        if(values.phone.value.length !== 11) handelSetError(err,"phone");
-        if(values.checkbox.checked) handelSetError(err,"checkbox");
+        if(values.phone.value.length !== 13) handelSetError(err,"phone");
+        if(!values.checkbox.checked) handelSetError(err,"checkbox");
         if(!values.service.value) handelSetError(err,"service");
         if(values.comment.value.length > 500) handelSetError(err,"comment");
-        console.log(err)
         if(err.length) {
             setError(err);
         } else {
+            console.log("success")
             // Add logick for backend 
             //router.push('/modal/error')
-            router.push('/modal/success')
+            const subHref = window.location.href.includes("about") ? "/about/" : "/";
+            router.push(`${subHref}modal/success`)
         }
         console.log(error)
     };
@@ -117,8 +116,6 @@ const Form:FC<Props> = ({fieldClassNames = {}, className = "", service = ""}) =>
                 return <FormItem errorText={getError(elem.id)} key={`form-item-${i}`} onChange={onChange} {...elem} {...values[elem.id]} {...fieldClassNames[elem.id]}/>
         }
     }
-
-    console.log(service,"++++")
 
     return(
         <div className={`flex flex-wrap justify-between ${className}`}>

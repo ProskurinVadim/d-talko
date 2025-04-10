@@ -3,12 +3,9 @@ import {FC, Suspense} from "react";
 import Modal from "@/app/components/shared/Modal";
 import Form, { FieldClassNames } from "@/app/components/shared/Form";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 
-const FormModalPage:FC<object> = () => {
-    const searchParams = useSearchParams();
-    const service = searchParams.get("service");
-
+const FormModalPage:FC<{service: string}> = ({service=""}) => {
+    console.log(encodeURIComponent(service),"Service")
     const CLASS_NAMES: FieldClassNames = {
         phone: {tlwVar: {field:{type:"half"}}},
         service: {tlwVar: {field:{type:"half"}}},

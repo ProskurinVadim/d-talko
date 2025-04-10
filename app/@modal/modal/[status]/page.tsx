@@ -1,10 +1,9 @@
 "use client"
-import {notFound, useRouter} from 'next/navigation';
+import {useRouter} from 'next/navigation';
 import Modal from '@/app/components/shared/Modal';
 import { SectionTitle, Text } from '@/app/components/common';
-import { button } from '@/app/components/common/Button/button.tailwind';
+import Button from '@/app/components/common/Button/';
 import {FC, use} from 'react';
-import Link from 'next/link';
 
 interface Props {
     params:  Promise<{status:string}>;
@@ -12,17 +11,13 @@ interface Props {
 
 const StatusModalPage:FC<Props> = ({ params }) => {
     const { status } = use(params);
-    console.log(status)
+
     const router = useRouter();
     const goBack = () => {
         router.back();
     }
-    if (status !== 'error' && status !== 'success') {
-        notFound();
-    }
-    
-    if (typeof window !== 'undefined' && window.location.pathname === `/modal/${status}`) {
-        notFound();
+    const returnToMainPage = () => {
+        window.location.href = window.location.href.split("modal")[0];
     }
 
     const DATA = {
@@ -52,7 +47,7 @@ const StatusModalPage:FC<Props> = ({ params }) => {
                 <div className="lg:max-w-[474px]">
                     <SectionTitle tlwVar={{color: status === "error" ? "danger" : "main_dark", type:"modal"}} className="mt-6">{data.title}</SectionTitle>
                     <Text tlwVar={{type: "normal", color: "additional_light", leading: "normal"}} className="mt-4">{data.text}</Text>
-                    <Link className={`block mt-12 ${button({type:"primary"})}`} href="/">На головну</Link>
+                    <Button className="inline-block mt-12" onClick={returnToMainPage}>На головну</Button>
                 </div>
             </div>
         </Modal>
